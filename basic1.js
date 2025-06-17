@@ -32,7 +32,6 @@ console.log('1'/'a');
 
 console.log('10'- 2);
 console.log(20 - '5');
-console.log(20 - '5');
 console.log('50' - '10');
 console.log(10*2);
 console.log(20*'5');
