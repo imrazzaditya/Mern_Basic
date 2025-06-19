@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Menu</title>
+  <style>
+    * {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      border: 2px solid yellow;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .box {
+      border: 1px solid black;
+      background-color: aqua;
+      border-radius: 20px;
+      padding: 1rem;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+
+    .tags {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .t{
+      background-color: white;
+      border: 2px solid #4CAF50;
+      color: #4CAF50;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      
+     }
+
+    .t:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Recipe Menu Card</h1>
+  </header>
+
+  <div class="container">
+  <div class="box" id="r1">
+    <h2>Recipe 1</h2>
+    <p>Ingredients: Flour, Spices, Sauces</p>
+    <p>Instructions: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, magni..</p>
+    <div class="rating"><h5>Rating: 4★</h5></div>
+  </div>
+  <div class="box" id="r2">
+    <h2>Recipe 2</h2>
+    <p>Ingredients: Rice, Chicken, Spices</p>
+    <p>Instructions: Cook rice and chicken with spices for 45 minutes.</p>
+    <div class="rating"><h5>Rating: 3.5★</h5></div>
+  </div>
+  <div class="box" id="r3">
+    <h2>Recipe 3</h2>
+    <p>Ingredients: Pasta, Tomato Sauce, Cheese</p>
+    <p>Instructions: Boil pasta and mix with sauce and cheese.</p>
+    <div class="rating"><h5>Rating: 4.5★</h5></div>
+  </div>
+</div>
+
+  <div class="tags">
+    <button class="t">Starters</button>
+    <button class="t">Main Course</button>
+    <button class="t">Desserts</button>
+  </div>
+  <script>
+  const recipeImages = {
+    r1: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/veg-cutlet-recipe.jpg", // Example for Recipe 1
+    r2: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/chicken-biryani.jpg",    // Example for Recipe 2
+    r3: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/pasta-recipe.jpg"         // Example for Recipe 3
+  };
+
+  Object.keys(recipeImages).forEach(id => {
+    const box = document.getElementById(id);
+
+    const img = document.createElement("img");
+    img.src = recipeImages[id];
+    img.alt = "Recipe Image";
+    img.style.width = "100%";
+    img.style.borderRadius = "10px";
+    img.style.marginBottom = "0.5rem";
+
+    // Insert the image before the rating div
+    const ratingDiv = box.querySelector(".rating");
+    box.insertBefore(img, ratingDiv);
+  });
+</script>
+
+</body>
+</html>

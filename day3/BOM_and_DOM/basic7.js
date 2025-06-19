@@ -5,13 +5,20 @@
 
 //1.document.getElement_s_BytagName-->[] (iterable) (HTML Collection)
 
-const headings = document.getElementsByTagName("h3");
-console.log("headings: ", headings);
+// const headings = document.getElementsByTagName("h3");
+// console.log("headings: ", headings);
 
-const header = document.getElementsByTagName("header");
+// const header = document.getElementsByTagName("header");
+// console.log("header: ", header);
+
+// headings[0].innerText = "Hello World";
+// headings[1].innerText = "Hello Adi";
+
+
+const titles = document.querySelectorAll("h3");
+console.log("titles: ", titles);
+
+const header = document.querySelector("header");   //null if not found
 console.log("header: ", header);
-
-headings[0].innerText = "Hello World";
-headings[1].innerText = "Hello Adi";
 
 

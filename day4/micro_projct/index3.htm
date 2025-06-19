@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pop-up-view {
+           
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+        }
+
+        #pop-up-content{
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 2rem;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+<h2>REcipe Store</h2>
+<button>Home</button>
+</header>
+
+<main>
+    <div class="card">
+        <p>Dummy Card</p>
+        <p>Dummy Cuisine</p>
+        <p>Dummy Rating</p>
+        <p>Dummy Servings</p>
+        <button onclick="handleCardClick({
+            name: 'pizza',
+            cuisine: 'italian',
+            rating: 4.5,
+            servings: 2
+        })">Click Me</button>
+    </div>
+</main>
+<footer>
+    &copy; 2023 Recipe Store
+</footer>
+
+<div id ="pop-up-view">
+    <div id="pop-up-container">
+        <div id ="pop-up-content">  <!--This div is used beacuse when we will use--->
+                 <p>Hello</p>          <!----   innerText in Js to edit content then it will  --> 
+        </div>               <!----    remove whole previous content including-the Close button also thats why used seperate div-->
+            
+        <button onclick="handleClose()">Close</button>
+</div>
+
+</div>
+
+
+<script src="./app3.js"></script>
+
+    
+    
+</body>
+</html>
