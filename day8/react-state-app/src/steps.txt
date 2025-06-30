@@ -1,0 +1,7 @@
+npm create vite
+ if want same file name as given then in project name give .
+ nmp i
+ npm run dev
+
+ Ctrl+S to run always
+ 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+        display:flex;
+        flex-direction: column;
+        gap:0.75rem;
+        align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <form action ="./thanku.html">
+        <fieldset>
+        <input type="text" name="username" placeholder="Enter your username" onkeydown="handleUserName(event)">
+        <input type="email" name="email" placeholder="Enter your email" />
+        <input type="password" name="password" placeholder="Enter your password" />
+        <button>Register</button>
+        </fieldset>
+    </form>
+    <script src="./form.js">   </script>
+</body>
+</html>
